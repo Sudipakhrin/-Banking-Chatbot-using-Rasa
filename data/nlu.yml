@@ -1,0 +1,137 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+- intent: ask_how_are_you
+  examples: |
+    - How are you?
+    - How's it going?
+    - How are things?
+    - How have you been?
+    - How are you?
+    - How's it going?
+    - How are things?
+    - How have you been?
+    - How do you feel?
+    - What's your mood?
+    - Are you feeling good?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: check_balance
+  examples: |
+    - What's the balance in my [savings](account_type) account?
+    - Can you tell me how much money I have in my [checking](account_type) account?
+    - I'd like to know the balance in my [retirement](account_type) account.
+    - check my [savings](account_type) balance
+    - Can I check the balance of my [savings](account_type) account?
+    - How much do I have in my [savings](account_type) account?
+    - What's the balance in my account?
+    - Can you tell me my balance?
+    - I want to know how much money I have in my account.
+    - My name is [Sudeep](name), what's my balance?
+
+- intent: transaction_history
+  examples: |
+    - Can I see my transaction history?
+    - Show me my past transactions.
+    - What are my recent transactions?
+    - I'd like to review my transaction history.
+    - Can you display my last transactions?
+    - I want to see my previous transactions.
+    - What transactions have I made recently?
+    - Show me my transaction history.
+    - I'd like to see my recent transactions.
+
+
+
+
+
+

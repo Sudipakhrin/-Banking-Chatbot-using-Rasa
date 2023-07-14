@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+- story: check balance story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_balance
+    entities:
+    - account_type: savings
+  - action: utter_check_balance
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: ask how are you then check balance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_how_are_you
+  - action: utter_ask_how_are_you
+  - intent: check_balance
+    entities:
+    - account_type: savings
+  - action: action_check_balance
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: check balance affirm then goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_balance
+    entities:
+    - account_type: savings
+  - action: action_check_balance
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: unhappy mood check balance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: check_balance
+    entities:
+    - account_type: savings
+  - action: action_check_balance
+  - intent: goodbye
+  - action: utter_goodbye
+
+

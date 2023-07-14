@@ -1,0 +1,80 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - check_balance
+  - transaction_history
+  - ask_how_are_you
+
+entities:
+- account_type
+- account_number
+- name
+
+actions:
+  - action_check_balance
+
+slots:
+  account_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: account_type
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a nice day!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_balance:
+  - text: "Your {account_type} account balance is Rs. 1000."
+  - text: "Dear {name}, your account {account_number} has a balance of Rs. 1000."
+
+  utter_transaction_history:
+  - text: "Here's the recent transactions in your {account_type} account."
+
+
+  utter_ask_how_are_you:
+  - text: "I'm a bot, so I don't have feelings, but thanks for asking!"
+
+
+  utter_check_balance:
+  - text: "Your {account_type} account balance is Rs. 1000."
+  - text: "Dear {name}, your {account_type} account has a balance of Rs. 1000."
+
+
+ 
+  
+
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
